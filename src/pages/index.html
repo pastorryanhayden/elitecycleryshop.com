@@ -1,0 +1,75 @@
+---
+layout: default
+---
+
+<div class="brands">
+    <div class="authorized">
+        <h3>Authorized Dealer</h3>
+        <div class="brand-list">
+            <a href="#"><img src="{{root}}assets/fuji.png" alt=""></a>
+            <a href="#"><img src="{{root}}assets/profile.png" alt=""></a>
+        </div><!-- brand-list -->
+    </div><!-- authorized -->
+    <div class="reseller">
+        <h3>Reselling and Servicing</h3>
+        <img src="{{root}}assets/secondary-brands.png" alt="">
+        <p>and many other fine brands.</p>
+    </div><!-- reseller -->
+</div>
+<!-- brands -->
+<div class="main-content">
+    <div class="home-about">
+        <h3>We Live This Stuff!</h3>
+        {{#each  pagesData}}
+        {{#ifequal home 'home_content'}}
+        <div class="home-about-images">
+            {{#each_upto photos 4 }}
+                <img src="{{thumbnails.large.url }}" width="75px" height="75px">
+            {{/each_upto}}
+        </div><!-- home about images -->
+                
+        <p>{{ markdown_content }}</p>
+        {{/ifequal}}
+        {{/each }}
+    </div><!-- /home-about -->
+    <div class="secondary">
+    <div class="home-events">
+        <h3>Upcoming Events:</h3>
+        <div class="home-event-inner">
+            {{#each_upto events 1}}
+            <div class="home-event-details">
+                <h4><a href="#">{{name}}</a></h4>
+                <p class="date">{{datetime}}</p>
+                <p class="details">{{description}}</p>
+                <a href="#" class="button">Learn More</a>
+            </div><!-- homeeventdetails -->
+            <div class="home-event-photo">
+                {{#each_upto featured_image 1}}
+                <a href="#"><img src="{{url}}" alt=""></a>
+                {{/each_upto}}
+            </div>
+            {{/each_upto }}
+        </div><!-- inner -->
+    </div><!-- /home-events -->
+    <div class="home-photos">
+        <h3>Recent Photos:</h3>
+        <div class="home-photos-wrapper">
+            {{#each_upto photos 1}}
+            {{#each photos}}
+                <img src="{{ thumbnails.large.url }}" alt="" width="100px" height="100px">
+            {{/each}}
+            {{/each_upto}}
+        </div><!-- home-photos-wrapper -->
+        
+    </div><!-- /home-photos -->
+    </div><!-- secondary -->
+</div><!-- /main-content -->
+<div class="home-bikes">
+    <h3>Recent Additions</h3>
+    <div class="bikes">
+        {{#each_upto bikes 4}}
+        <a href="#">{{#each_upto Picture 1}}<img src="{{url}}" alt="">{{/each_upto}}</a>
+        {{/each_upto}}
+    </div><!--/bikes-->
+    <a href="{{root}}bikes.html" class="button">View All Bikes</a>
+</div><!-- home bikes -->

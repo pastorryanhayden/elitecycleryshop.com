@@ -1,0 +1,98 @@
+.invoice
+    width: 8in
+    height: 10.5in
+    background: white 
+    padding: .25in
+    .head   
+        border-top: 15px solid black
+        img 
+            margin-top: -15px
+    .body 
+        display: flex
+        .sidebar
+            width: 2in
+            padding-right: .35in
+            p
+                margin-bottom: 0
+                margin-top: 0
+                font-size: 12px
+            h4
+                margin-bottom: 0
+                margin-top: 40px
+        .main-content 
+            width: 6in
+            min-height: 8.5in 
+            .client-information 
+                p 
+                    margin-bottom: 0
+                    margin-top: 0
+                    font-size: 12px
+                h4
+                    margin-bottom: 0
+                    margin-top: 20px
+                p.date
+                    margin-bottom: 20px
+            .items 
+                table
+                    width: 5.3in 
+                    th
+                        background-color: $dark-gray
+                        color: $white 
+                        font-weight: bold
+                    th.description
+                        width: 3in
+                        text-align: left 
+                        border-right: 1px dotted white 
+                        padding-left: .1in
+                    th.quantity
+                        width: 1in
+                        text-align: left 
+                        border-right: 1px dotted white 
+                        padding-left: .1in
+                    th.unit 
+                        width: 1in
+                        text-align: left 
+                        border-right: 1px dotted white 
+                        padding-left: .1in
+                    th.cost
+                        width: 1in
+                        text-align: left 
+                        padding-left: .1in
+                    tr.item-row 
+                        border-bottom: 1px dotted $dark-gray 
+                        td 
+                            padding-left: .1in 
+                            border-right: 1px dotted $dark-gray 
+                        td:last-child
+                            border-right: none 
+                    tr.subtotal
+                        border-top: 2px solid $dark-gray
+                        td 
+                            padding-left: .1in 
+                            border-right: 1px dotted $dark-gray 
+                            border-bottom: 1px dotted $dark-gray 
+                        td:last-child
+                            border-right: none
+                    tr.tax
+                        border-bottom: 2px solid $dark-gray
+                        td 
+                            padding-left: .1in 
+                            border-right: 1px dotted $dark-gray 
+                        td:last-child
+                            border-right: none 
+                    tr.total
+                        border-bottom: 2px solid $dark-gray
+                        td 
+                            padding-left: .1in 
+                            border-right: 1px dotted $dark-gray 
+                        td:last-child
+                            border-right: none   
+        .signature 
+            p
+                padding-top: 40px
+                padding-left: 0
+    .footer 
+        width: 100%
+        border-bottom: 4px solid black  
+                
+     

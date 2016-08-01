@@ -1,0 +1,45 @@
+{{#each_upto headers 1}}
+{{#random header_images}}
+<style type="text/css">
+.header {
+    height: 400px;
+    background: url({{url}}) no-repeat top center;
+    background-size: cover;
+}
+{{/random}}
+{{/each_upto}}
+</style>
+<div class="wrapper">
+<div class="header">
+    <nav>
+    <div class="main-menu">
+        <a href="{{root}}about-us.html">About</a>
+        <a href="{{root}}bikes.html">Bikes</a>
+        <a href="{{root}}gear.html">Gear</a>
+        <a href="{{root}}repairs.html">Repairs</a>
+        <a href="#">Events</a>
+    </div><!-- main-menu -->
+    </nav>
+    <h1><a href="{{root}}">Elite Cyclery Bicycle Shop</a></h1>
+</div><!-- /header -->
+<div class="band">
+    <div class="slogan">
+        {{#random quotes}} 
+        <h3>“{{ quote }}”</h3>
+        <p>~{{ author }}~</p>
+        {{/random}} 
+    </div><!-- slogan -->
+        <div class="free-tuneup">
+            <img src="{{root}}assets/tuneup.png" alt="">
+            <div class="text">
+            <h3>Free <br>Adjustments</h3>
+            <p>For Life</p>
+            </div><!-- text -->
+        </div><!-- free-tuneup -->
+    <div class="address">
+        <div class="address-wrapper">
+        <p><i class="fa fa-building"></i> 1901 Champaign Ave, Mattoon<br><i class="fa fa-phone"></i> (217) 234-6738 <br> 
+<i class="fa fa-clock-o"></i> M-F 8:00-5:30</p>
+</div><!-- address-wrapper -->
+    </div><!-- address -->
+</div><!-- /band -->

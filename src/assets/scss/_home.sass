@@ -1,0 +1,146 @@
+.brands
+    display: flex
+    flex-wrap: wrap
+    padding: 20px
+    text-align: center
+    border-bottom: 1px solid black
+    margin-bottom: 20px
+    .authorized, .reseller
+        width: 100%
+        @include breakpoint(670px)
+            width: 50%
+        h3
+            font-size: 20px
+            margin-bottom: 20px
+            margin-top: 20px
+            color: $primary-color
+            font-style: italic
+        p
+            color: $primary-color
+            font-style: italic
+            margin-top: 10px
+.main-content
+    display: flex
+    flex-wrap: wrap
+    padding: 20px
+    width: 100%
+    p
+        max-width: 900px
+        width: 90%
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 40px
+        min-width: 200px
+    .home-about, .secondary
+        width: 100%
+        @include breakpoint(670px)
+            width: 50%
+        h3
+            font-size: 35px
+            font-weight: bold
+            color: $primary-color
+            text-align: center
+            margin-bottom: 20px
+    .home-about
+        border-bottom: 1px solid black
+        padding: 20px
+        @include breakpoint(670px)
+            border-right: 1px solid black
+            border-bottom: none
+        .home-about-images
+            width: 100%
+            margin-bottom: 20px
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-around
+            img
+                margin-bottom: 10px
+                width: 75px
+                height: 75px
+        p
+            max-width: 90%
+            margin-left: auto
+            margin-right: auto
+.secondary
+    padding: 20px
+    .home-event-inner
+        display: flex
+        flex-wrap: wrap
+        padding: 20px
+    .home-event-details
+        margin-right: 20px
+        width: 100%
+        text-align: center
+        margin-top: 20px
+        @include breakpoint(800px)
+            width: 45%
+            text-align: left
+            margin-top: 0
+
+        h4
+            font-size: 15px
+            font-weight: bold
+            color: black
+            line-height: 20px
+            margin-bottom: 0
+            a
+                color: black
+        p.date
+            font-style: italic
+            margin-bottom: 5px
+    .home-event-photo
+        width: 100%
+        order: -1
+        @include breakpoint(800px)
+            width: 45%
+            order: 2
+
+    .home-photos-wrapper
+        text-align: center
+        img
+            margin-left: 10px
+            margin-bottom: 10px
+.home-bikes
+    width: 100%
+    background: $secondary-color
+    text-align: center
+    padding: 20px
+    h3
+        color: $primary-color
+        font-family: $cursive
+    .bikes
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        align-content: center
+
+        a
+            width: 215px
+            margin-bottom: 20px
+            margin-left: auto
+            margin-right: auto
+.nail 
+  position: relative
+  width: 100px
+  height: 100px
+  overflow: hidden
+
+.nail img 
+  position: absolute
+  left: 50%
+  top: 50%
+  height: 100%
+  width: auto
+  transform: translate(-50%,-50%)
+
+.nail img.portrait 
+  width: 100%
+  height: auto
+
+
+
+
+
+
+
+

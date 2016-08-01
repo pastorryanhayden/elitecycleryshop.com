@@ -1,0 +1,415 @@
+---
+layout: default
+---
+
+<div class="main-content bike-page">
+<div class="menu-wrapper">
+<div class="jumpmenu">
+<ul class="menu vertical">
+    <h5>New Bikes</h5>
+    <li><a href="#NR">New Road</a></li>
+    <li><a href="#NT">New Tri</a></li>
+    <li><a href="#NM">New Mountain</a></li>
+    <li><a href="#NL">New Lifestyle</a></li>
+    <span></span>
+    <h5>Used Bikes</h5>
+    <li><a href="#UR">Used Road</a></li>
+    <li><a href="#UT">Used Tri</a></li>
+    <li><a href="#UM">Used Mountain</a></li>
+    <li><a href="#UL">Used Lifestyle</a></li>
+</ul>
+</div><!--/jumpmenu-->
+</div><!--menu-wrapper-->
+<div class="bikes">
+    
+    {{#each_upto newRoadBikes 1 }}
+        {{#if Name }}
+             <h4 id="NR">New Road Bikes</h4>
+             <div class="bike-wrapper">
+        {{/if }}
+    {{/each_upto }}
+    
+
+    {{#each newRoadBikes }}
+        <div class="single-bike">
+            {{#if Picture }}
+                {{#each Picture }}
+                 <img src="{{url}}" alt="" class="bike-image">
+                 {{/each }}
+             {{else }}
+                <img src="http://placehold.it/1920x1080?text=Photo+Coming+Soon" alt="" class="bike-image">
+             {{/if }}
+            
+            <div class="bike-description">
+                <h4 class="make" id=""><a href="#">{{Vendor_name}}</a></h4>
+                <p class="model"> {{Name}}</p>
+                 {{#if Description }}
+                <p class="description">{{Description }}</p>
+            {{/if }}
+                {{#if video_url}}
+                <a href="{{video_url}}" class="video" target="blank"><i class="fa fa-play-circle"></i> Click for Video</a>
+                {{/if}}
+                <div class="price">
+                {{#if MSRP }}<p class="MSRP">${{MSRP}}</p>{{/if }}
+                <p class="Sale">${{Price}}</p>
+                </div><!--/price-->
+           
+         
+            </div><!-- bike-description -->
+        
+        </div><!-- single-bike -->
+    {{/each }}
+    
+    {{#each_upto newRoadBikes 1 }}
+    
+        {{#if Name }}
+    
+             </div><!--/bike-wrapper-->
+        {{/if }}
+    {{/each_upto }}
+
+
+<!-- Tri Bikes -->
+   
+        {{#each_upto newTriBikes 1 }}
+        {{#if Name }}
+             <h4 id="NT">New Tri Bikes</h4>
+             <div class="bike-wrapper">
+        {{/if }}
+    {{/each_upto }}
+    
+
+    {{#each newTriBikes }}
+        <div class="single-bike">
+            {{#if Picture }}
+                {{#each Picture }}
+                 <img src="{{url}}" alt="" class="bike-image">
+                 {{/each }}
+             {{else }}
+                <img src="http://placehold.it/1920x1080?text=Photo+Coming+Soon" alt="" class="bike-image">
+             {{/if }}
+            
+            <div class="bike-description">
+                <h4 class="make" id=""><a href="#">{{Vendor_name}}</a></h4>
+                <p class="model"> {{Name}}</p>
+                 {{#if Description }}
+                <p class="description">{{Description }}</p>
+            {{/if }}
+                {{#if video_url}}
+                <a href="{{video_url}}" class="video" target="blank"><i class="fa fa-play-circle"></i> Click for Video</a>
+                {{/if}}
+                <div class="price">
+                {{#if MSRP }}<p class="MSRP">${{MSRP}}</p>{{/if }}
+                <p class="Sale">${{Price}}</p>
+                </div><!--/price-->
+           
+         
+            </div><!-- bike-description -->
+        
+        </div><!-- single-bike -->
+    {{/each }}
+    
+    {{#each_upto newTriBikes 1 }}
+    
+        {{#if Name }}
+    
+             </div><!--/bike-wrapper-->
+        {{/if }}
+    {{/each_upto }}
+
+
+    <!-- Mountain Bikes -->
+   
+        {{#each_upto newMtnBikes 1 }}
+        {{#if Name }}
+             <h4 id="NM">New Mountain Bikes</h4>
+             <div class="bike-wrapper">
+        {{/if }}
+    {{/each_upto }}
+    
+
+    {{#each newMtnBikes }}
+        <div class="single-bike">
+            {{#if Picture }}
+                {{#each Picture }}
+                 <img src="{{url}}" alt="" class="bike-image">
+                 {{/each }}
+             {{else }}
+                <img src="http://placehold.it/1920x1080?text=Photo+Coming+Soon" alt="" class="bike-image">
+             {{/if }}
+            
+            <div class="bike-description">
+                <h4 class="make" id=""><a href="#">{{Vendor_name}}</a></h4>
+                <p class="model"> {{Name}}</p>
+                 {{#if Description }}
+                <p class="description">{{Description }}</p>
+            {{/if }}
+                {{#if video_url}}
+                <a href="{{video_url}}" class="video" target="blank"><i class="fa fa-play-circle"></i> Click for Video</a>
+                {{/if}}
+                <div class="price">
+                {{#if MSRP }}<p class="MSRP">${{MSRP}}</p>{{/if }}
+                <p class="Sale">${{Price}}</p>
+                </div><!--/price-->
+           
+         
+            </div><!-- bike-description -->
+        
+        </div><!-- single-bike -->
+    {{/each }}
+    
+    {{#each_upto newMtnBikes 1 }}
+    
+        {{#if Name }}
+    
+             </div><!--/bike-wrapper-->
+        {{/if }}
+    {{/each_upto }}
+
+
+    <!-- Lifestyle Bikes -->
+   
+        {{#each_upto newLsBikes 1 }}
+        {{#if Name }}
+             <h4 id="NL">New Lifestyle Bikes</h4>
+             <div class="bike-wrapper">
+        {{/if }}
+    {{/each_upto }}
+    
+
+    {{#each newLsBikes }}
+        <div class="single-bike">
+            {{#if Picture }}
+                {{#each Picture }}
+                 <img src="{{url}}" alt="" class="bike-image">
+                 {{/each }}
+             {{else }}
+                <img src="http://placehold.it/1920x1080?text=Photo+Coming+Soon" alt="" class="bike-image">
+             {{/if }}
+            
+            <div class="bike-description">
+                <h4 class="make" id=""><a href="#">{{Vendor_name}}</a></h4>
+                <p class="model"> {{Name}}</p>
+                 {{#if Description }}
+                <p class="description">{{Description }}</p>
+            {{/if }}
+                {{#if video_url}}
+                <a href="{{video_url}}" class="video" target="blank"><i class="fa fa-play-circle"></i> Click for Video</a>
+                {{/if}}
+                <div class="price">
+                {{#if MSRP }}<p class="MSRP">${{MSRP}}</p>{{/if }}
+                <p class="Sale">${{Price}}</p>
+                </div><!--/price-->
+           
+         
+            </div><!-- bike-description -->
+        
+        </div><!-- single-bike -->
+    {{/each }}
+    
+    {{#each_upto newLsBikes 1 }}
+    
+        {{#if Name }}
+    
+             </div><!--/bike-wrapper-->
+        {{/if }}
+    {{/each_upto }}
+
+
+ 
+  <!-- Road Bikes -->
+   
+        {{#each_upto usedRoadBikes 1 }}
+        {{#if Name }}
+             <h4 id="UR">Used Road Bikes</h4>
+             <div class="bike-wrapper">
+        {{/if }}
+    {{/each_upto }}
+    
+
+    {{#each usedRoadBikes }}
+        <div class="single-bike">
+            {{#if Picture }}
+                {{#each Picture }}
+                 <img src="{{url}}" alt="" class="bike-image">
+                 {{/each }}
+             {{else }}
+                <img src="http://placehold.it/1920x1080?text=Photo+Coming+Soon" alt="" class="bike-image">
+             {{/if }}
+            
+            <div class="bike-description">
+                <h4 class="make" id=""><a href="#">{{Vendor_name}}</a></h4>
+                <p class="model"> {{Name}}</p>
+                 {{#if Description }}
+                <p class="description">{{Description }}</p>
+            {{/if }}
+                {{#if video_url}}
+                <a href="{{video_url}}" class="video" target="blank"><i class="fa fa-play-circle"></i> Click for Video</a>
+                {{/if}}
+                <div class="price">
+                {{#if MSRP }}<p class="MSRP">${{MSRP}}</p>{{/if }}
+                <p class="Sale">${{Price}}</p>
+                </div><!--/price-->
+           
+         
+            </div><!-- bike-description -->
+        
+        </div><!-- single-bike -->
+    {{/each }}
+    
+    {{#each_upto usedRoadBikes 1 }}
+    
+        {{#if Name }}
+    
+             </div><!--/bike-wrapper-->
+        {{/if }}
+    {{/each_upto }}
+
+
+    <!-- Tri Bikes -->
+   
+        {{#each_upto usedTriBikes 1 }}
+        {{#if Name }}
+             <h4 id="UT">Used Tri Bikes</h4>
+             <div class="bike-wrapper">
+        {{/if }}
+    {{/each_upto }}
+    
+
+    {{#each usedTriBikes }}
+        <div class="single-bike">
+            {{#if Picture }}
+                {{#each Picture }}
+                 <img src="{{url}}" alt="" class="bike-image">
+                 {{/each }}
+             {{else }}
+                <img src="http://placehold.it/1920x1080?text=Photo+Coming+Soon" alt="" class="bike-image">
+             {{/if }}
+            
+            <div class="bike-description">
+                <h4 class="make" id=""><a href="#">{{Vendor_name}}</a></h4>
+                <p class="model"> {{Name}}</p>
+                 {{#if Description }}
+                <p class="description">{{Description }}</p>
+            {{/if }}
+                {{#if video_url}}
+                <a href="{{video_url}}" class="video" target="blank"><i class="fa fa-play-circle"></i> Click for Video</a>
+                {{/if}}
+                <div class="price">
+                {{#if MSRP }}<p class="MSRP">${{MSRP}}</p>{{/if }}
+                <p class="Sale">${{Price}}</p>
+                </div><!--/price-->
+           
+         
+            </div><!-- bike-description -->
+        
+        </div><!-- single-bike -->
+    {{/each }}
+    
+    {{#each_upto usedTriBikes 1 }}
+    
+        {{#if Name }}
+    
+             </div><!--/bike-wrapper-->
+        {{/if }}
+    {{/each_upto }}
+
+
+       <!-- Mountain Bikes -->
+   
+        {{#each_upto usedMntBikes 1 }}
+        {{#if Name }}
+             <h4 id="UM">Used Mountain Bikes</h4>
+             <div class="bike-wrapper">
+        {{/if }}
+    {{/each_upto }}
+    
+
+    {{#each usedMntBikes }}
+        <div class="single-bike">
+            {{#if Picture }}
+                {{#each Picture }}
+                 <img src="{{url}}" alt="" class="bike-image">
+                 {{/each }}
+             {{else }}
+                <img src="http://placehold.it/1920x1080?text=Photo+Coming+Soon" alt="" class="bike-image">
+             {{/if }}
+            
+            <div class="bike-description">
+                <h4 class="make" id=""><a href="#">{{Vendor_name}}</a></h4>
+                <p class="model"> {{Name}}</p>
+                 {{#if Description }}
+                <p class="description">{{Description }}</p>
+            {{/if }}
+                {{#if video_url}}
+                <a href="{{video_url}}" class="video" target="blank"><i class="fa fa-play-circle"></i> Click for Video</a>
+                {{/if}}
+                <div class="price">
+                {{#if MSRP }}<p class="MSRP">${{MSRP}}</p>{{/if }}
+                <p class="Sale">${{Price}}</p>
+                </div><!--/price-->
+           
+         
+            </div><!-- bike-description -->
+        
+        </div><!-- single-bike -->
+    {{/each }}
+    
+    {{#each_upto usedMntBikes 1 }}
+    
+        {{#if Name }}
+    
+             </div><!--/bike-wrapper-->
+        {{/if }}
+    {{/each_upto }}
+
+        <!-- Lifestyle Bikes -->
+   
+        {{#each_upto usedLsBikes 1 }}
+        {{#if Name }}
+             <h4 id="UL">Used Lifestyle Bikes</h4>
+             <div class="bike-wrapper">
+        {{/if }}
+    {{/each_upto }}
+    
+
+    {{#each usedLsBikes }}
+        <div class="single-bike">
+            {{#if Picture }}
+                {{#each Picture }}
+                 <img src="{{url}}" alt="" class="bike-image">
+                 {{/each }}
+             {{else }}
+                <img src="http://placehold.it/1920x1080?text=Photo+Coming+Soon" alt="" class="bike-image">
+             {{/if }}
+            
+            <div class="bike-description">
+                <h4 class="make" id=""><a href="#">{{Vendor_name}}</a></h4>
+                <p class="model"> {{Name}}</p>
+                 {{#if Description }}
+                <p class="description">{{Description }}</p>
+            {{/if }}
+                {{#if video_url}}
+                <a href="{{video_url}}" class="video" target="blank"><i class="fa fa-play-circle"></i> Click for Video</a>
+                {{/if}}
+                <div class="price">
+                {{#if MSRP }}<p class="MSRP">${{MSRP}}</p>{{/if }}
+                <p class="Sale">${{Price}}</p>
+                </div><!--/price-->
+           
+         
+            </div><!-- bike-description -->
+        
+        </div><!-- single-bike -->
+    {{/each }}
+    
+    {{#each_upto usedLsBikes 1 }}
+    
+        {{#if Name }}
+    
+             </div><!--/bike-wrapper-->
+        {{/if }}
+    {{/each_upto }}
+
+</div>
+</div><!-- /main-content -->
